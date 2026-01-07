@@ -1,0 +1,135 @@
+# 🔗 COMBINED FEED FEATURE GUIDE
+
+## What Is It?
+
+The **Combined Feed** feature lets you merge 2-5 different websites or RSS feeds into ONE single feed. Perfect for:
+
+- Following multiple local Patch sites in one feed
+- Creating a custom news aggregator
+- Mixing websites that don't have RSS feeds with ones that do
+- Reducing clutter in your RSS reader (1 feed instead of 5!)
+
+---
+
+## How to Use It
+
+### Option 1: Use the Web Interface
+
+1. Go to your deployed app homepage
+2. Click the **"Combine Feeds"** tab
+3. Enter 2-5 URLs (websites or RSS feeds)
+4. Click **"Combine Feeds"**
+5. Copy the generated URL
+6. Add to your RSS reader!
+
+### Option 2: Build the URL Manually
+
+**Basic Format:**
+```
+https://YOUR-APP.vercel.app/api/combine?urls=URL1,URL2,URL3
+```
+
+**Example - Multiple Patch Sites:**
+```
+https://YOUR-APP.vercel.app/api/combine?urls=https://patch.com/new-jersey/brick,https://patch.com/new-jersey/freehold,https://patch.com/illinois/joliet
+```
+
+**Alternative Format (url1, url2, url3):**
+```
+https://YOUR-APP.vercel.app/api/combine?url1=https://patch.com&url2=https://techcrunch.com&url3=https://arstechnica.com
+```
+
+---
+
+## Real-World Examples
+
+### Example 1: All My Local News
+Track all your nearby Patch communities:
+```
+/api/combine?urls=https://patch.com/new-jersey/brick,https://patch.com/new-jersey/toms-river,https://patch.com/new-jersey/freehold
+```
+
+### Example 2: Tech News Aggregator
+Combine major tech sites:
+```
+/api/combine?urls=https://techcrunch.com,https://arstechnica.com,https://theverge.com
+```
+
+### Example 3: Mix & Match
+Combine websites WITHOUT RSS feeds + existing RSS feeds:
+```
+/api/combine?urls=https://patch.com,https://example.com/feed.xml,https://blog.site.com/rss
+```
+
+---
+
+## Important Notes
+
+✅ **Works with:**
+- Any website (even without RSS)
+- Existing RSS/Atom feeds
+- Mix of both!
+
+⚠️ **Limitations:**
+- Maximum 5 URLs
+- Each URL is limited to ~20 articles
+- Total combined feed has ~100 articles max
+
+🔄 **Updates:**
+- Combined feeds refresh when your RSS reader checks them
+- Usually every 30-60 minutes depending on your reader
+
+---
+
+## Tips for Best Results
+
+1. **Use Related Sources**: Combine similar topics (all tech news, all local news, etc.)
+
+2. **Start with 2-3 URLs**: Don't overwhelm yourself. You can always create multiple combined feeds.
+
+3. **Mix Local Patches**: Perfect for following multiple nearby communities:
+   ```
+   /api/combine?urls=https://patch.com/new-jersey/YOUR-TOWN,https://patch.com/new-jersey/NEARBY-TOWN
+   ```
+
+4. **Name Your Feeds**: In your RSS reader, give each combined feed a descriptive name like "Local NJ News" or "Tech Headlines"
+
+5. **Test First**: Generate the URL and click it to see the XML - make sure it's working before adding to your reader
+
+---
+
+## Troubleshooting
+
+**"No articles found"**
+- One or more URLs might be blocking automated access
+- Try each URL individually first using the single feed generator
+- If one works and others don't, combine only the working ones
+
+**"Too many URLs"**
+- Maximum is 5 URLs
+- Create multiple combined feeds if you need more sources
+
+**"Feed not updating"**
+- Check your RSS reader's refresh settings
+- Most readers update every 30-60 minutes
+- Some readers let you manually refresh
+
+---
+
+## FAQ
+
+**Q: Can I combine feeds that are already combined?**
+A: No, but you can just add all the original URLs to one combined feed instead.
+
+**Q: Will articles show which source they came from?**
+A: Yes! Each article title includes [Source Name] at the end.
+
+**Q: How often should I update the combined feed?**
+A: Your RSS reader handles this automatically. Most update every 30-60 minutes.
+
+**Q: Can I save my combined feed URLs?**
+A: Yes! Bookmark them or save them in a text file. Once deployed, they work forever.
+
+---
+
+**Enjoy your streamlined RSS reading experience!** 🎉
