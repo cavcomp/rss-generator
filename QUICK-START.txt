@@ -1,0 +1,81 @@
+# 🚀 QUICK START GUIDE - Deploy in 5 Minutes!
+
+## What You're Getting
+
+A FREE hosted RSS generator that gives you permanent URLs like:
+`https://your-app.vercel.app/api/feed?url=https://patch.com`
+
+## ⚡ Super Fast Deploy (3 Steps)
+
+### STEP 1: Download the Files
+- Click the download button to get the `rss-generator` folder
+- Extract it to your computer
+
+### STEP 2: Sign Up for Vercel (FREE)
+1. Go to: https://vercel.com/signup
+2. Click "Continue with GitHub" (or email)
+3. That's it - no credit card needed!
+
+### STEP 3: Deploy
+1. Go to: https://vercel.com/new
+2. Drag the `rss-generator` folder onto the page
+   OR click "Browse" and select the folder
+3. Click "Deploy"
+4. Wait 30 seconds...
+5. ✅ DONE! Copy your app URL
+
+## 🎯 How to Use It
+
+Once deployed, your URLs will look like:
+
+**For Patch.com:**
+```
+https://YOUR-APP.vercel.app/api/feed?url=https://patch.com
+```
+
+**For Your Local Patch:**
+```
+https://YOUR-APP.vercel.app/api/feed?url=https://patch.com/new-jersey/freehold
+```
+
+**For ANY Website:**
+```
+https://YOUR-APP.vercel.app/api/feed?url=https://ANY-SITE.com
+```
+
+## 📱 Add to Your RSS Reader
+
+1. Copy your feed URL (example above)
+2. Open Feedly, Inoreader, or any RSS reader
+3. Click "Add Feed" or the + button
+4. Paste your URL
+5. Done! Updates automatically
+
+## 💡 Pro Tips
+
+✅ **Save Your URLs** - Bookmark your feed URLs
+✅ **Multiple Feeds** - Create different URLs for different sites
+✅ **Free Forever** - Vercel free tier is permanent
+✅ **Auto Updates** - Feeds refresh when your reader checks them
+
+## 🆘 Need Help?
+
+**Can't find the files?**
+- Look for `rss-generator` folder with 4 files inside
+
+**Deploy button not working?**
+- Make sure you're uploading the FOLDER, not individual files
+
+**Still stuck?**
+- Watch Vercel's 2-minute deploy video: https://vercel.com/docs/getting-started-with-vercel
+
+---
+
+## What's Next?
+
+After deploying:
+1. Visit your app URL (Vercel will give you this)
+2. The homepage shows you how to create feed URLs
+3. Start adding feeds to your RSS reader!
+
+**That's it! You now have your own RSS generator! 🎉**
