@@ -1,0 +1,47 @@
+{
+  "cleanUrls": true
+}
+```
+
+4. Scroll down → Click **"Commit changes"**
+
+---
+
+### Step 4: Verify Your Structure
+
+After these changes, your repo should look like:
+```
+rss-generator/
+├── api/
+│   ├── feed.js         ← NEW
+│   └── combine.js      ← MOVED HERE
+├── index.html
+├── package.json
+├── vercel.json         ← NEW
+├── README.md
+└── COMBINED-FEEDS-GUIDE.txt
+```
+
+---
+
+### Step 5: Vercel Will Auto-Deploy
+
+1. Wait 30-60 seconds
+2. Vercel should automatically detect the changes and redeploy
+3. Go to: https://rss-generator-six.vercel.app
+4. You should see your homepage with tabs!
+
+---
+
+### Step 6: Test Your API Routes
+
+Try these URLs:
+
+**Single Feed:**
+```
+https://rss-generator-six.vercel.app/api/feed?url=https://patch.com
+```
+
+**Combined Feed:**
+```
+https://rss-generator-six.vercel.app/api/combine?urls=https://patch.com,https://techcrunch.com
