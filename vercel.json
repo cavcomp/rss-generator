@@ -1,47 +1,91 @@
-{
-  "cleanUrls": true
-}
+   {
+     "cleanUrls": true,
+     "rewrites": [
+       {
+         "source": "/s/:code",
+         "destination": "/api/s?code=:code"
+       }
+     ]
+   }
 ```
 
-4. Scroll down → Click **"Commit changes"**
+7. **Scroll down → Click "Commit changes"**
+
+8. ✅ **Vercel.json updated!**
 
 ---
 
-### Step 4: Verify Your Structure
+### **STEP 4: Update `index.html`** 
 
-After these changes, your repo should look like:
+⚠️ **This is the biggest file - do it carefully**
+
+1. **Click on `index.html`** (in repo root)
+
+2. **Click the pencil icon** (Edit)
+
+3. **Select ALL** (Ctrl+A or Cmd+A)
+
+4. **Delete everything**
+
+5. **Download the NEW `index.html`** from above if you haven't
+
+6. **Open the downloaded `index.html` in Notepad/TextEdit**
+
+7. **Copy ALL the content**
+
+8. **Paste it into GitHub**
+
+9. **Scroll down → Click "Commit changes"**
+
+10. ✅ **Index.html updated!**
+
+---
+
+### **STEP 5: Verify Your Files**
+
+Go back to your repo main page and check:
 ```
-rss-generator/
-├── api/
-│   ├── feed.js         ← NEW
-│   └── combine.js      ← MOVED HERE
-├── index.html
-├── package.json
-├── vercel.json         ← NEW
-├── README.md
-└── COMBINED-FEEDS-GUIDE.txt
+✅ You should see in /api folder:
+   - combine.js
+   - feed.js
+   - s.js          ← NEW
+   - shorten.js    ← NEW
+
+✅ In root:
+   - index.html (Updated just now)
+   - vercel.json (Updated just now)
+   - package.json
+   - README.md
 ```
 
 ---
 
-### Step 5: Vercel Will Auto-Deploy
+### **STEP 6: Wait for Vercel to Deploy**
 
-1. Wait 30-60 seconds
-2. Vercel should automatically detect the changes and redeploy
-3. Go to: https://rss-generator-six.vercel.app
-4. You should see your homepage with tabs!
+1. **Wait 60 seconds** ⏰
+
+2. Vercel will automatically detect your changes and redeploy
+
+3. You can check deployment status at:
+```
+   https://vercel.com/dashboard
+```
 
 ---
 
-### Step 6: Test Your API Routes
+### **STEP 7: TEST IT!**
 
-Try these URLs:
-
-**Single Feed:**
+**Go to your app:**
 ```
-https://rss-generator-six.vercel.app/api/feed?url=https://patch.com
+https://rss-generator-six.vercel.app
 ```
 
-**Combined Feed:**
+**Test the short link feature:**
+
+1. Click **"Combine Feeds"** tab
+
+2. Enter these URLs:
 ```
-https://rss-generator-six.vercel.app/api/combine?urls=https://patch.com,https://techcrunch.com
+   Box 1: https://www.app.com/news
+   Box 2: https://www.app.com/sports
+   Box 3: https://patch.com/new-jersey/freehold
